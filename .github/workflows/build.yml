@@ -206,15 +206,15 @@ jobs:
           ;;
           "KernelSU-Next")
             echo "Installing KernelSU Next..."
-          curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
           ;;
-            "KernelSU-Next-SuSFS")
+          "KernelSU-Next-SuSFS")
             echo "Installing KernelSU Next with SuSFS..."
             curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
           ;;
           *)
-          echo "Installing default KernelSU version..."
-          curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+            echo "Installing default KernelSU version..."
+            curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
           ;;
           esac
 
