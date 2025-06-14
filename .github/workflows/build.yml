@@ -49,7 +49,8 @@ jobs:
 
       DEFCONFIG_NAME: ${{ matrix.repos.kernelSource.defconfig }}
 
-      withKernelSU: ${{ matrix.repos.withKernelSU }}
+      withKernelSU: ${{ matrix.repos.kernelSU.withKernelSU }}
+      kernelSUFork: ${{ matrix.repos.kernelSU.kernelSUFork }}
       ccache: ${{ matrix.repos.ccache }}
       useAnykernel: ${{ matrix.repos.AnyKernel3.use }}
       release: ${{ matrix.repos.AnyKernel3.release }}
@@ -198,7 +199,24 @@ jobs:
             rm -rf "./drivers/kernelsu"
           fi
 
+          case "${{ env.kernelSUFork }}" in
+          "KernelSU")
+            echo "Installing KernelSU..."
+            curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
+          ;;
+          "KernelSU-Next")
+            echo "Installing KernelSU Next..."
+          curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
+          ;;
+            "KernelSU-Next-SuSFS")
+            echo "Installing KernelSU Next with SuSFS..."
+            curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
+          ;;
+          *)
+          echo "Installing default KernelSU version..."
           curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+          ;;
+          esac
 
           echo -e "CONFIG_KPROBES=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
           echo -e "CONFIG_HAVE_KPROBES=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
