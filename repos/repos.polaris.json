@@ -13,10 +13,10 @@
     },
     "toolchains": [
       {
-        "repo": "https://gitlab.com/jjpprrrr/prelude-clang",
-        "branch": "master",
-        "name": "prelude-clang",
-        "binPath": ["bin"]
+        "repo": "https://github.com/Xiaomi-sdm845-KSU/android-kernel-tools",
+        "branch": "clang13",
+        "name": "clang13",
+        "binPath": ["./bin"]
       }
     ],
     "ccache": true,
