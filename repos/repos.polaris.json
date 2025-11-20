@@ -9,7 +9,7 @@
     },
     "kernelSU": {
       "withKernelSU": true,
-      "kernelSUFork": "SukiSU-Ultra"
+      "kernelSUFork": "KernelSU-Next"
     },
     "toolchains": [
       {
