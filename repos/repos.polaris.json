@@ -56,7 +56,7 @@
     },
     "kernelSU": {
       "withKernelSU": true,
-      "kernelSUFork": "KernelSU-Next"
+      "kernelSUFork": "KernelSU"
     },
     "toolchains": [
       {
