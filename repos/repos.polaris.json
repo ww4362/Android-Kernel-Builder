@@ -1,11 +1,11 @@
 [ 
   {
     "kernelSource": {
-      "name": "EtudeKernel-SukiSU-Ultra",
-      "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_polaris",
-      "branch": "thirteen",
+      "name": "Xiaomi_Kernel_OpenSource-sdm845",
+      "repo": "https://github.com/Xiaomi-sdm845-KSU/Xiaomi_Kernel_OpenSource-sdm845",
+      "branch": "88-zstd",
       "device": "polaris",
-      "defconfig": "polaris_defconfig"
+      "defconfig": "polaris_user_defconfig"
     },
     "kernelSU": {
       "withKernelSU": true,
