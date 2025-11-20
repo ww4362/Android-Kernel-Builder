@@ -56,7 +56,7 @@
     },
     "kernelSU": {
       "withKernelSU": true,
-      "kernelSUFork": "KernelSU"
+      "kernelSUFork": "SukiSU-Ultra"
     },
     "toolchains": [
       {
