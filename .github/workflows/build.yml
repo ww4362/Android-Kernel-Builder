@@ -214,7 +214,7 @@ jobs:
           ;;
           "SukiSU-Ultra")
             echo "Installing SukiSU-Ultra..."
-            curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main
+            curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s nongki
           ;;
           *)
             echo "Installing default KernelSU version..."
