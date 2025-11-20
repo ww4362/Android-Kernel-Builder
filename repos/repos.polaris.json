@@ -1,54 +1,7 @@
-[
+[ 
   {
     "kernelSource": {
-      "name": "EtudeKernel-KernelSU-Next",
-      "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_polaris",
-      "branch": "thirteen",
-      "device": "polaris",
-      "defconfig": "polaris_defconfig"
-    },
-    "kernelSU": {
-      "withKernelSU": true,
-      "kernelSUFork": "KernelSU-Next-SuSFS"
-    },
-    "toolchains": [
-      {
-        "repo": "https://gitlab.com/jjpprrrr/prelude-clang",
-        "branch": "master",
-        "name": "prelude-clang",
-        "binPath": ["bin"]
-      }
-    ],
-    "ccache": true,
-    "params": {
-      "ARCH": "arm64",
-      "CC": "prelude-clang/bin/clang",
-      "externalCommand": {
-        "CROSS_COMPILE": "prelude-clang/bin/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "prelude-clang/bin/arm-linux-gnueabi-",
-        "LD": "prelude-clang/bin/ld.lld",
-        "AR": "prelude-clang/bin/llvm-ar",
-        "NM": "prelude-clang/bin/llvm-nm",
-        "OBJCOPY": "prelude-clang/bin/llvm-objcopy",
-        "OBJDUMP": "prelude-clang/bin/llvm-objdump",
-        "READELF": "prelude-clang/bin/llvm-readelf",
-        "OBJSIZE": "prelude-clang/bin/llvm-size",
-        "STRIP": "prelude-clang/bin/llvm-strip",
-        "LDGOLD": "prelude-clang/bin/aarch64-linux-gnu-ld.gold",
-        "LLVM_AR": "prelude-clang/bin/llvm-ar",
-        "LLVM_DIS": "prelude-clang/bin/llvm-dis"
-      }
-    },
-    "AnyKernel3": {
-      "use": true,
-      "release": true,
-      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
-      "branch": "polaris"
-    }
-  },
-  {
-    "kernelSource": {
-      "name": "EtudeKernel-KernelSU-Next-SuSFS",
+      "name": "EtudeKernel-SukiSU-Ultra",
       "repo": "https://github.com/PixelExperience-Devices/kernel_xiaomi_polaris",
       "branch": "thirteen",
       "device": "polaris",
@@ -93,42 +46,4 @@
       "branch": "polaris"
     }
   },
-  {
-    "kernelSource": {
-      "name": "LineageKernel-KernelSU",
-      "repo": "https://github.com/LineageOS/android_kernel_xiaomi_sdm845",
-      "branch": "lineage-21",
-      "device": "polaris",
-      "defconfig": "vendor/xiaomi/polaris.config"
-    },
-    "withKernelSU": true,
-    "toolchains": [
-      {
-        "url": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas"
-      },
-      {
-        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone",
-        "branch": "18",
-        "name": "clang"
-      }
-    ],
-    "ccache": true,
-    "params": {
-      "ARCH": "arm64",
-      "CROSS_COMPILE": "aarch64-linux-gnu-",
-      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
-      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "",
-      "CC": "clang"
-    },
-    "AnyKernel3": {
-      "use": true,
-      "release": true,
-      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
-      "branch": "polaris"
-    }
-  }
 ]
